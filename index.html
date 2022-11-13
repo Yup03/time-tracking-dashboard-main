@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <script type="module" src="./script.js" defer></script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="dashboard">
+        <div class="user-data">
+          <div class="user-data--header">
+            <div class="img-container">
+              <img src="./images/image-jeremy.png" alt="image-jeremy" />
+            </div>
+            <small>Report for</small>
+            <div class="user-data--about">Jeremy<br />Robson</div>
+          </div>
+          <div class="user-data--periods">
+            <button
+              class="user-data--period user-data--daily"
+              data-period="daily"
+            >
+              Daily
+            </button>
+            <button
+              class="user-data--period user-data--weekly"
+              data-period="weekly"
+            >
+              Weekly
+            </button>
+            <button
+              class="user-data--period user-data--monthly"
+              data-period="monthly"
+            >
+              Monthly
+            </button>
+          </div>
+        </div>
+
+        <div class="data-container">
+          <div class="data-bg data-bg--work"></div>
+          <div class="work-data data">
+            <div class="data-header">
+              <h6 class="heading" data-title="work"></h6>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                />
+              </svg>
+            </div>
+            <p class="hours"></p>
+
+            <p class="hours--prev"></p>
+          </div>
+        </div>
+
+        <div class="data-container">
+          <div class="data-bg data-bg--play"></div>
+          <div class="play-data data">
+            <div class="data-header">
+              <h6 class="heading" data-title="play"></h6>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                />
+              </svg>
+            </div>
+            <p class="hours"></p>
+
+            <p class="hours--prev"></p>
+          </div>
+        </div>
+
+        <div class="data-container">
+          <div class="data-bg data-bg--study"></div>
+          <div class="study-data data">
+            <div class="data-header">
+              <h6 class="heading" data-title="study"></h6>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                />
+              </svg>
+            </div>
+            <p class="hours"></p>
+
+            <p class="hours--prev"></p>
+          </div>
+        </div>
+
+        <div class="data-container">
+          <div class="data-bg data-bg--exercise"></div>
+          <div class="exercise-data data">
+            <div class="data-header">
+              <h6 class="heading" data-title="exercise"></h6>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                />
+              </svg>
+            </div>
+            <p class="daily-hours hours"></p>
+
+            <p class="hours--prev"></p>
+          </div>
+        </div>
+
+        <div class="data-container">
+          <div class="data-bg data-bg--social"></div>
+          <div class="social-data data">
+            <div class="data-header">
+              <h6 class="heading" data-title="social"></h6>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                />
+              </svg>
+            </div>
+            <p class="daily-hours hours"></p>
+
+            <p class="hours--prev"></p>
+          </div>
+        </div>
+
+        <div class="data-container">
+          <div class="data-bg data-bg--self"></div>
+          <div class="self-data data">
+            <div class="data-header">
+              <h6 class="heading" data-title="self care"></h6>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                />
+              </svg>
+            </div>
+            <p class="daily-hours hours"></p>
+
+            <p class="hours--prev"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
